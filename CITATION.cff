@@ -1,0 +1,31 @@
+cff-version: 1.0.1
+message: Please cite this software using these metadata.
+title: Sinaliza - Sistema de Auxílio à Comunicação em Restaurantes
+authors:
+  - family-names: Portella
+    given-names: Diego
+  - family-names: Azevedo
+    given-names: Rafael Mota
+  - family-names: Marinho
+    given-names: Victhor Gabriel
+  - family-names: Oliveira
+    given-names: Lucca
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Borlido Barcelos
+    given-names: Isabela
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Carlos da Silva
+    given-names: Luiz
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Bruno da Cruz Costa
+    given-names: Ricardo
+keywords:
+  - Acessibilidade
+  - Inclusão
+repository-code: https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2026-1-ti1-0438200-g2-1
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2026-05-11

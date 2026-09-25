@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio | Sinaliza</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="page-header">
+        <a id="link-voltar" href="../../index.html" class="btn-voltar">← Voltar</a>
+        <h1 id="titulo-pagina">Gerenciar Cardápio</h1>
+        <p id="subtitulo-pagina" class="subtitulo">Carregando...</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Formulário de cadastro / edição -->
+        <section class="card" id="secao-form">
+            <h2 id="titulo-form" class="section-title">Cadastrar novo prato</h2>
+
+            <!-- Campo oculto para guardar o ID no modo edição -->
+            <input type="hidden" id="pratoId">
+
+            <div class="form-grid">
+                <div class="input-group">
+                    <label for="nomePrato">Nome do prato</label>
+                    <input type="text" id="nomePrato" placeholder="Ex: Pizza Margherita">
+                </div>
+
+                <div class="input-group">
+                    <label for="precoPrato">Preço (R$)</label>
+                    <input type="number" id="precoPrato" placeholder="Ex: 45.00" step="0.01" min="0">
+                </div>
+
+                <div class="input-group">
+                    <label for="categoriaPrato">Categoria</label>
+                    <select id="categoriaPrato">
+                        <option value="">Selecione...</option>
+                        <option>Entrada</option>
+                        <option>Prato Principal</option>
+                        <option>Massa</option>
+                        <option>Hambúrguer</option>
+                        <option>Combinado</option>
+                        <option>Sobremesa</option>
+                        <option>Bebida</option>
+                        <option>Acompanhamento</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="urlFoto">URL da foto</label>
+                    <input type="text" id="urlFoto" placeholder="https://...">
+                </div>
+            </div>
+
+            <div class="input-group area-ia">
+                <label for="descricaoPrato">Descrição</label>
+                <textarea id="descricaoPrato" rows="3"
+                    placeholder="Clique em Gerar descrição ou escreva sua própria."></textarea>
+                <button type="button" id="btnGerarDescricao" class="btn-secundario">
+                    ✨ Gerar descrição automaticamente
+                </button>
+            </div>
+
+            <p id="mensagem" class="mensagem hidden"></p>
+
+            <div class="form-actions">
+                <button id="btnSalvar" class="btn-primary">Cadastrar Prato</button>
+                <button id="btnCancelar" class="btn-ghost hidden">Cancelar edição</button>
+            </div>
+        </section>
+
+        <!-- Lista de pratos cadastrados -->
+        <section class="card">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+                <h2 class="section-title" style="margin-bottom:0;">Pratos Cadastrados</h2>
+                <input type="text" id="inputBusca" placeholder="🔍 Filtrar pratos..."
+                    style="padding:7px 12px;border:1px solid #e2e8f0;border-radius:20px;font-size:13px;width:200px;outline:none;">
+            </div>
+            <div id="listaPratos"></div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,841 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "senha": "123",
+      "nome": "Administrador do Sistema",
+      "email": "admin@abc.com",
+      "tipo": "admin"
+    },
+    {
+      "id": "2",
+      "senha": "123",
+      "nome": "Usuario Comum",
+      "email": "user@abc.com",
+      "tipo": "cliente"
+    },
+    {
+      "id": "3",
+      "senha": "123",
+      "nome": "Rommel",
+      "email": "rommel@gmail.com",
+      "tipo": "cliente"
+    }
+  ],
+  "restaurantes": [
+    {
+      "id": "1",
+      "senha": "123",
+      "cnpj": "25.877.812/0001-40",
+      "nome": "Restaurante Xapuri",
+      "descricao": "Referência em comida mineira autêntica na região da Pampulha. Ambiente rústico e acolhedor, com equipe em constante treinamento para inclusão.",
+      "endereco": "Rua Mandacaru, 260 - Trevo",
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "telefone": "(31) 3496-6198",
+      "tipoCozinha": "Brasileira",
+      "horario": "Ter-Dom 12h-23h",
+      "foto": "http://localhost:3000/assets/images/xapuri.jpg",
+      "lat": -19.860634,
+      "lng": -44.004112,
+      "cardapioDigital": false,
+      "qrCodeMesas": false,
+      "cardapio": [],
+      "checklist": {
+        "comunicacao": {
+          "libras": false,
+          "cardapioImagens": false,
+          "cardapioDigitalAcessivel": false,
+          "chatTexto": false
+        },
+        "tecnologia": {
+          "qrCode": false,
+          "tabletPedidos": false,
+          "pedidoVisual": false
+        },
+        "atendimento": {
+          "chamadaVisual": false,
+          "funcionariosTreinados": false,
+          "tempoRespostaRapido": false
+        },
+        "inclusao": {
+          "ambienteVisual": false,
+          "sinalizacao": false
+        }
+      },
+      "pontuacaoAcessibilidade": 2
+    },
+    {
+      "id": "2",
+      "senha": "123",
+      "cnpj": "25.834.722/0001-72",
+      "nome": "O Italiano",
+      "descricao": "Restaurante italiano sofisticado no Olhos D'Água. Focado em acessibilidade, conta com cardápio digital visual, pratos autênticos e equipe super capacitada para um atendimento inclusivo.",
+      "endereco": "Rua São Vicente, 155 - Olhos D'Água",
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "telefone": "(31) 3288-3212",
+      "tipoCozinha": "Italiana",
+      "horario": "Ter-Dom 11h-23h",
+      "foto": "http://localhost:3000/assets/images/italiano.jpg",
+      "lat": -19.981885,
+      "lng": -43.957545,
+      "cardapioDigital": true,
+      "qrCodeMesas": true,
+      "cardapio": [],
+      "checklist": {
+        "comunicacao": {
+          "libras": true,
+          "cardapioImagens": true,
+          "cardapioDigitalAcessivel": true,
+          "chatTexto": true
+        },
+        "tecnologia": {
+          "qrCode": true,
+          "tabletPedidos": true,
+          "pedidoVisual": true
+        },
+        "atendimento": {
+          "chamadaVisual": true,
+          "funcionariosTreinados": true,
+          "tempoRespostaRapido": true
+        },
+        "inclusao": {
+          "ambienteVisual": true,
+          "sinalizacao": true
+        }
+      },
+      "pontuacaoAcessibilidade": 4.5
+    },
+    {
+      "id": "3",
+      "senha": "123",
+      "cnpj": "26.443.377/0001-09",
+      "nome": "Udon Lourdes",
+      "descricao": "Restaurante japonês premium com cardápio visual detalhado e pedidos por tablet. Ambiente sofisticado e bem sinalizado.",
+      "endereco": "Rua Gonçalves Dias, 1965 - Lourdes",
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "telefone": "(31) 3243-8004",
+      "tipoCozinha": "Japonesa",
+      "horario": "Ter-Dom 18h-23h",
+      "foto": "http://localhost:3000/assets/images/udon.png",
+      "lat": -19.928154,
+      "lng": -43.944421,
+      "cardapioDigital": true,
+      "qrCodeMesas": false,
+      "cardapio": [],
+      "checklist": {
+        "comunicacao": {
+          "libras": false,
+          "cardapioImagens": true,
+          "cardapioDigitalAcessivel": true,
+          "chatTexto": false
+        },
+        "tecnologia": {
+          "qrCode": false,
+          "tabletPedidos": true,
+          "pedidoVisual": true
+        },
+        "atendimento": {
+          "chamadaVisual": false,
+          "funcionariosTreinados": true,
+          "tempoRespostaRapido": true
+        },
+        "inclusao": {
+          "ambienteVisual": true,
+          "sinalizacao": false
+        }
+      },
+      "pontuacaoAcessibilidade": 3.3
+    },
+    {
+      "id": "4",
+      "senha": "123",
+      "cnpj": "31.721.071/0001-07",
+      "nome": "Porcão BH",
+      "descricao": "Churrascaria icônica de BH com vista para a cidade. Possui QR code nas mesas e sinalização visual para chamados da equipe.",
+      "endereco": "Av. Raja Gabáglia, 2671 - São Bento",
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "telefone": "(31) 3293-8787",
+      "tipoCozinha": "Churrasco",
+      "horario": "Seg-Dom 11h-23h",
+      "foto": "http://localhost:3000/assets/images/porcao.png",
+      "lat": -19.948212,
+      "lng": -43.949247,
+      "cardapioDigital": false,
+      "qrCodeMesas": true,
+      "cardapio": [],
+      "checklist": {
+        "comunicacao": {
+          "libras": false,
+          "cardapioImagens": true,
+          "cardapioDigitalAcessivel": false,
+          "chatTexto": false
+        },
+        "tecnologia": {
+          "qrCode": true,
+          "tabletPedidos": false,
+          "pedidoVisual": true
+        },
+        "atendimento": {
+          "chamadaVisual": true,
+          "funcionariosTreinados": false,
+          "tempoRespostaRapido": true
+        },
+        "inclusao": {
+          "ambienteVisual": true,
+          "sinalizacao": true
+        }
+      },
+      "pontuacaoAcessibilidade": 3
+    },
+    {
+      "id": "5",
+      "senha": "123",
+      "cnpj": "43.711.610/0001-06",
+      "nome": "Las Chicas Vegan",
+      "descricao": "Restaurante vegano super descolado no Edifício Maletta, com forte pegada de inclusão, equipe engajada e atendimento adaptado.",
+      "endereco": "Av. Augusto de Lima, 233 - Sobreloja 20 - Centro",
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "telefone": "(31) 99900-5555",
+      "tipoCozinha": "Vegetariana",
+      "horario": "Seg-Sab 11h-22h",
+      "foto": "http://localhost:3000/assets/images/vegas.png",
+      "lat": -19.923761,
+      "lng": -43.938532,
+      "cardapioDigital": true,
+      "qrCodeMesas": true,
+      "cardapio": [],
+      "checklist": {
+        "comunicacao": {
+          "libras": true,
+          "cardapioImagens": true,
+          "cardapioDigitalAcessivel": true,
+          "chatTexto": true
+        },
+        "tecnologia": {
+          "qrCode": true,
+          "tabletPedidos": true,
+          "pedidoVisual": true
+        },
+        "atendimento": {
+          "chamadaVisual": true,
+          "funcionariosTreinados": true,
+          "tempoRespostaRapido": true
+        },
+        "inclusao": {
+          "ambienteVisual": true,
+          "sinalizacao": true
+        }
+      },
+      "pontuacaoAcessibilidade": 5
+    },
+    {
+      "id": "6",
+      "senha": "123",
+      "cnpj": "28.389.268/0001-86",
+      "nome": "Coreu Burguer",
+      "descricao": "A hamburgueria queridinha do Coração Eucarístico. Famosa pelos blends artesanais, oferece um ambiente descontraído com totens de autoatendimento e cardápio visual prático.",
+      "endereco": "Rua Coração Eucarístico de Jesus, 397 - Coração Eucarístico",
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "telefone": "(31) 3375-1234",
+      "tipoCozinha": "Hambúrguer",
+      "horario": "Seg-Dom 18h-23h",
+      "foto": "http://localhost:3000/assets/images/coreu.png",
+      "lat": -19.923485,
+      "lng": -43.988015,
+      "cardapioDigital": true,
+      "qrCodeMesas": false,
+      "cardapio": [],
+      "checklist": {
+        "comunicacao": {
+          "libras": false,
+          "cardapioImagens": true,
+          "cardapioDigitalAcessivel": true,
+          "chatTexto": false
+        },
+        "tecnologia": {
+          "qrCode": false,
+          "tabletPedidos": true,
+          "pedidoVisual": true
+        },
+        "atendimento": {
+          "chamadaVisual": false,
+          "funcionariosTreinados": true,
+          "tempoRespostaRapido": true
+        },
+        "inclusao": {
+          "ambienteVisual": true,
+          "sinalizacao": false
+        }
+      },
+      "pontuacaoAcessibilidade": 3
+    },
+    {
+      "id": "7",
+      "senha": "123",
+      "cnpj": "17.844.791/0001-39",
+      "nome": "Macaxeira Restaurante",
+      "descricao": "Culinária nordestina autêntica no coração da Pampulha. O ambiente está em processo de adaptação para garantir mais acessibilidade.",
+      "endereco": "Av. Guarapari, 890 - Santa Amélia",
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "telefone": "(31) 3491-1111",
+      "tipoCozinha": "Nordestina",
+      "horario": "Seg-Dom 11h-23h",
+      "foto": "http://localhost:3000/assets/images/macaxeira.png",
+      "lat": -19.839842,
+      "lng": -43.968712,
+      "cardapioDigital": false,
+      "qrCodeMesas": false,
+      "cardapio": [],
+      "checklist": {
+        "comunicacao": {
+          "libras": false,
+          "cardapioImagens": true,
+          "cardapioDigitalAcessivel": false,
+          "chatTexto": false
+        },
+        "tecnologia": {
+          "qrCode": false,
+          "tabletPedidos": false,
+          "pedidoVisual": false
+        },
+        "atendimento": {
+          "chamadaVisual": false,
+          "funcionariosTreinados": false,
+          "tempoRespostaRapido": true
+        },
+        "inclusao": {
+          "ambienteVisual": true,
+          "sinalizacao": true
+        }
+      },
+      "pontuacaoAcessibilidade": 2
+    },
+    {
+      "id": "8",
+      "senha": "123",
+      "cnpj": "14.555.999/0001-10",
+      "nome": "O Granulado",
+      "descricao": "Uma doceria e cafeteria afetiva no bairro Anchieta. Famosa por seus doces artesanais, possui um cardápio visualmente intuitivo e ambiente acolhedor para toda a comunidade.",
+      "endereco": "Rua Passa Tempo, 550 - Anchieta",
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "telefone": "(31) 3225-4433",
+      "tipoCozinha": "Cafeteria e Doceria",
+      "horario": "Seg-Sab 10h-20h",
+      "foto": "http://localhost:3000/assets/images/granulado.png",
+      "lat": -19.946352,
+      "lng": -43.923845,
+      "cardapioDigital": true,
+      "qrCodeMesas": true,
+      "cardapio": [],
+      "checklist": {
+        "comunicacao": {
+          "libras": true,
+          "cardapioImagens": true,
+          "cardapioDigitalAcessivel": true,
+          "chatTexto": true
+        },
+        "tecnologia": {
+          "qrCode": true,
+          "tabletPedidos": false,
+          "pedidoVisual": true
+        },
+        "atendimento": {
+          "chamadaVisual": true,
+          "funcionariosTreinados": true,
+          "tempoRespostaRapido": true
+        },
+        "inclusao": {
+          "ambienteVisual": true,
+          "sinalizacao": true
+        }
+      },
+      "pontuacaoAcessibilidade": 4
+    }
+],
+  "avaliacoes": [
+    {
+      "id": "1",
+      "restauranteId": 2,
+      "nota": 5,
+      "tags": [
+        "Fácil comunicação",
+        "Cardápio em Libras"
+      ],
+      "comentario": "Atendimento excelente, equipe preparada para comunicação em LIBRAS."
+    },
+    {
+      "id": "2",
+      "restauranteId": 2,
+      "nota": 5,
+      "tags": [
+        "Equipe capacitada",
+        "Sinalização visual"
+      ],
+      "comentario": "Melhor experiência que já tive em um restaurante. Recomendo muito."
+    },
+    {
+      "id": "3",
+      "restauranteId": 2,
+      "nota": 4,
+      "tags": [
+        "Fácil comunicação"
+      ],
+      "comentario": "Muito bom, só senti falta de mais opções no cardápio visual."
+    },
+    {
+      "id": "4",
+      "restauranteId": 3,
+      "nota": 4,
+      "tags": [
+        "Cardápio em Libras",
+        "Sinalização visual"
+      ],
+      "comentario": "Cardápio com fotos facilita muito o pedido. Ambiente bem sinalizado."
+    },
+    {
+      "id": "5",
+      "restauranteId": 3,
+      "nota": 3,
+      "tags": [
+        "Sinalização visual"
+      ],
+      "comentario": "Razoável. O tablet de pedidos funciona bem mas a equipe não sabe LIBRAS."
+    },
+    {
+      "id": "6",
+      "restauranteId": 5,
+      "nota": 5,
+      "tags": [
+        "Fácil comunicação",
+        "Equipe capacitada",
+        "Cardápio em Libras"
+      ],
+      "comentario": "Referência em acessibilidade! Toda equipe se comunica em LIBRAS."
+    },
+    {
+      "id": "7",
+      "restauranteId": 5,
+      "nota": 5,
+      "tags": [
+        "Sinalização visual",
+        "Banheiro adaptado"
+      ],
+      "comentario": "Perfeito em todos os sentidos. Voltarei com certeza."
+    },
+    {
+      "id": "8",
+      "restauranteId": 8,
+      "nota": 4,
+      "tags": [
+        "Fácil comunicação",
+        "Sinalização visual"
+      ],
+      "comentario": "Ótimo café com atendimento inclusivo. Avisos visuais nas mesas funcionam muito bem."
+    },
+    {
+      "id": "9",
+      "restauranteId": 1,
+      "nota": 2,
+      "tags": [],
+      "comentario": "Ainda precisa melhorar muito. Nenhum funcionário sabe LIBRAS."
+    },
+    {
+      "id": "10",
+      "restauranteId": 4,
+      "nota": 3,
+      "tags": [
+        "Sinalização visual"
+      ],
+      "comentario": "Sinalização visual ok, mas comunicação com a equipe ainda é difícil."
+    },
+    {
+      "restauranteId": 5,
+      "nota": 5,
+      "tags": [
+        "Fácil comunicação"
+      ],
+      "comentario": "Fácil comunicação",
+      "id": "RAp9C-64Mic"
+    },
+    {
+      "restauranteId": 3,
+      "nota": 5,
+      "tags": [
+        "Fácil comunicação",
+        "Sinalização visual",
+        "Estacionamento acessível"
+      ],
+      "comentario": "Sinalização visual, Fácil comunicação, Estacionamento acessível",
+      "id": "72-ERIknxdc"
+    },
+    {
+      "restauranteId": 6,
+      "nota": 3,
+      "tags": [
+        "Rampa de acesso",
+        "Banheiro adaptado",
+        "Piso tátil"
+      ],
+      "comentario": "Tem rampa de acesso, banheiro adaptado e piso tátil, mas falta acessibilidade para outras deficiências, como a auditiva.",
+      "usuarioId": null,
+      "id": "mKBePaM-nis"
+    },
+    {
+      "restauranteId": 7,
+      "nota": 1,
+      "tags": [],
+      "comentario": "Não há praticamente nenhuma acessibilidade.",
+      "usuarioId": null,
+      "id": "0hUxxXmBXfU"
+    },
+    {
+      "restauranteId": 7,
+      "nota": 2,
+      "tags": [
+        "Equipe capacitada"
+      ],
+      "comentario": "Equipe capacitada... Mas tirando isso, não ouve nenhuma acessibilidade num geral.",
+      "usuarioId": null,
+      "id": "5MTymzi7EdM"
+    },
+    {
+      "restauranteId": 2,
+      "nota": 4,
+      "tags": [
+        "Banheiro adaptado",
+        "Estacionamento acessível"
+      ],
+      "comentario": "teste, Estacionamento acessível, Banheiro adaptado",
+      "usuarioId": "1",
+      "id": "KZ9uucW",
+      "removida": true
+    },
+    {
+      "restauranteId": 7,
+      "usuarioId": "2",
+      "nota": 3,
+      "comentario": "Rampa de acesso, Banheiro adaptado, Estacionamento acessível.",
+      "tags": [
+        "Rampa de acesso",
+        "Banheiro adaptado",
+        "Estacionamento acessível"
+      ],
+      "data": "01/07/2026",
+      "id": "e4tT695iIqM"
+    }
+  ],
+  "cardapio": [
+    {
+      "id": "1",
+      "restauranteId": 2,
+      "nome": "Fettuccine Alfredo",
+      "descricao": "Massa fresca ao molho alfredo com parmesão e noz-moscada",
+      "categoria": "Massa",
+      "preco": 52,
+      "urlFoto": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=400"
+    },
+    {
+      "id": "2",
+      "restauranteId": 2,
+      "nome": "Lasanha à Bolonhesa",
+      "descricao": "Camadas de massa fresca com molho bolonhesa e queijo gratinado",
+      "categoria": "Massa",
+      "preco": 48,
+      "urlFoto": "https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400"
+    },
+    {
+      "id": "3",
+      "restauranteId": 2,
+      "nome": "Tiramisù",
+      "descricao": "Clássica sobremesa italiana com mascarpone e café",
+      "categoria": "Sobremesa",
+      "preco": 24,
+      "urlFoto": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=400"
+    },
+    {
+      "id": "4",
+      "restauranteId": 3,
+      "nome": "Sushi Combo 20 peças",
+      "descricao": "20 peças variadas: salmão, atum, camarão e hot roll",
+      "categoria": "Combinado",
+      "preco": 64.9,
+      "urlFoto": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=400"
+    },
+    {
+      "id": "5",
+      "restauranteId": 3,
+      "nome": "Temaki de Salmão",
+      "descricao": "Temaki grande com salmão fresco, cream cheese e cebolinha",
+      "categoria": "Temaki",
+      "preco": 28.5,
+      "urlFoto": "https://images.unsplash.com/photo-1617196034183-421b4040ed20?w=400"
+    },
+    {
+      "id": "6",
+      "restauranteId": 3,
+      "nome": "Missoshiru",
+      "descricao": "Sopa tradicional japonesa com tofu e alga wakame",
+      "categoria": "Entrada",
+      "preco": 14,
+      "urlFoto": "https://images.unsplash.com/photo-1547592180-85f173990554?w=400"
+    },
+    {
+      "id": "7",
+      "restauranteId": 5,
+      "nome": "Bowl de Quinoa",
+      "descricao": "Quinoa, grão-de-bico, legumes assados, tahine e sementes",
+      "categoria": "Prato Principal",
+      "preco": 42,
+      "urlFoto": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400"
+    },
+    {
+      "id": "8",
+      "restauranteId": 5,
+      "nome": "Hambúrguer de Grão",
+      "descricao": "Hambúrguer vegano de grão-de-bico, alface, tomate e molho especial",
+      "categoria": "Prato Principal",
+      "preco": 36,
+      "urlFoto": "https://images.unsplash.com/photo-1520072959219-c595dc870360?w=400"
+    },
+    {
+      "id": "9",
+      "restauranteId": 5,
+      "nome": "Suco Verde Detox",
+      "descricao": "Couve, maçã, gengibre, limão e pepino",
+      "categoria": "Bebida",
+      "preco": 18,
+      "urlFoto": "https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=400"
+    },
+    {
+      "id": "10",
+      "restauranteId": 6,
+      "nome": "Smash Burger Clássico",
+      "descricao": "Pão brioche, carne smash 180g, cheddar americano, picles e molho especial",
+      "categoria": "Hambúrguer",
+      "preco": 38.5,
+      "urlFoto": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400"
+    },
+    {
+      "id": "11",
+      "restauranteId": 6,
+      "nome": "Double Bacon",
+      "descricao": "Dois smash 180g, bacon crocante, queijo suíço e cebola caramelizada",
+      "categoria": "Hambúrguer",
+      "preco": 52,
+      "urlFoto": "https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400"
+    },
+    {
+      "id": "12",
+      "restauranteId": 6,
+      "nome": "Batata Rústica",
+      "descricao": "Batata frita em palito com casca, temperada com ervas e páprica",
+      "categoria": "Acompanhamento",
+      "preco": 22,
+      "urlFoto": "https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=400"
+    },
+    {
+      "id": "13",
+      "restauranteId": 8,
+      "nome": "Croissant de Presunto",
+      "descricao": "Croissant folhado recheado com presunto cozido e queijo gruyère",
+      "categoria": "Lanche",
+      "preco": 22,
+      "urlFoto": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400"
+    },
+    {
+      "id": "14",
+      "restauranteId": 8,
+      "nome": "Cappuccino Italiano",
+      "descricao": "Espresso duplo com leite vaporizado e espuma cremosa",
+      "categoria": "Bebida",
+      "preco": 16,
+      "urlFoto": "https://images.unsplash.com/photo-1534040385115-33dcb3acba5b?w=400"
+    },
+    {
+      "id": "15",
+      "restauranteId": 1,
+      "nome": "Prato Feito Especial",
+      "descricao": "Arroz, feijão, bife acebolado, farofa e salada mista",
+      "categoria": "Prato Principal",
+      "preco": 32,
+      "urlFoto": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=400"
+    }
+  ],
+  "categorias_garcom": [
+    {
+      "id": "1",
+      "nome": "Apresentação",
+      "icone": "👋"
+    },
+    {
+      "id": "2",
+      "nome": "Pedidos",
+      "icone": "🍔"
+    },
+    {
+      "id": "3",
+      "nome": "Pagamento",
+      "icone": "💳"
+    },
+    {
+      "id": "4",
+      "nome": "Dúvidas",
+      "icone": "❓"
+    },
+    {
+      "id": "5",
+      "nome": "Restrições",
+      "icone": "🚫"
+    },
+    {
+      "id": "6",
+      "nome": "Emergência",
+      "icone": "🚨"
+    }
+  ],
+  "frases_garcom": [
+    {
+      "id": "1",
+      "categoria": "Apresentação",
+      "texto": "Olá! Sou surdo(a). Por favor, comunique-se comigo lendo as frases desta tela ou apontando.",
+      "icone": "👋",
+      "favorita": true,
+      "customizada": false,
+      "ordem": 1
+    },
+    {
+      "id": "2",
+      "categoria": "Apresentação",
+      "texto": "Você pode escrever a resposta para mim, por favor?",
+      "icone": "✍️",
+      "favorita": true,
+      "customizada": false,
+      "ordem": 2
+    },
+    {
+      "id": "3",
+      "categoria": "Pedidos",
+      "texto": "Pode me trazer o cardápio, por favor?",
+      "icone": "📖",
+      "favorita": false,
+      "customizada": false,
+      "ordem": 3
+    },
+    {
+      "id": "4",
+      "categoria": "Pedidos",
+      "texto": "Gostaria de pedir este item do cardápio.",
+      "icone": "🍔",
+      "favorita": true,
+      "customizada": false,
+      "ordem": 4
+    },
+    {
+      "id": "5",
+      "categoria": "Pedidos",
+      "texto": "Pode me trazer uma água, por favor?",
+      "icone": "💧",
+      "favorita": true,
+      "customizada": false,
+      "ordem": 5
+    },
+    {
+      "id": "6",
+      "categoria": "Dúvidas",
+      "texto": "Onde fica o banheiro?",
+      "icone": "🚽",
+      "favorita": false,
+      "customizada": false,
+      "ordem": 6
+    },
+    {
+      "id": "7",
+      "categoria": "Dúvidas",
+      "texto": "Qual é a senha do Wi-Fi?",
+      "icone": "📶",
+      "favorita": false,
+      "customizada": false,
+      "ordem": 7
+    },
+    {
+      "id": "8",
+      "categoria": "Restrições",
+      "texto": "Este prato contém glúten ou lactose?",
+      "icone": "🌾",
+      "favorita": false,
+      "customizada": false,
+      "ordem": 8
+    },
+    {
+      "id": "9",
+      "categoria": "Restrições",
+      "texto": "Tenho alergia. Por favor, prepare meu pedido sem certos ingredientes.",
+      "icone": "🚫",
+      "favorita": false,
+      "customizada": false,
+      "ordem": 9
+    },
+    {
+      "id": "10",
+      "categoria": "Pagamento",
+      "texto": "Pode trazer a conta, por favor?",
+      "icone": "🧾",
+      "favorita": true,
+      "customizada": false,
+      "ordem": 10
+    },
+    {
+      "id": "11",
+      "categoria": "Pagamento",
+      "texto": "Vou pagar com cartão de crédito/débito.",
+      "icone": "💳",
+      "favorita": false,
+      "customizada": false,
+      "ordem": 11
+    },
+    {
+      "id": "12",
+      "categoria": "Pagamento",
+      "texto": "Vocês aceitam Pix?",
+      "icone": "📱",
+      "favorita": false,
+      "customizada": false,
+      "ordem": 12
+    },
+    {
+      "id": "13",
+      "categoria": "Emergência",
+      "texto": "Estou passando mal, por favor chame ajuda.",
+      "icone": "🚨",
+      "favorita": false,
+      "customizada": false,
+      "ordem": 13
+    },
+    {
+      "id": "14",
+      "categoria": "Emergência",
+      "texto": "Por favor, chame o gerente.",
+      "icone": "👔",
+      "favorita": false,
+      "customizada": false,
+      "ordem": 14
+    }
+  ],
+  "sessao": [
+    {
+      "id": "atual",
+      "usuarioId": "2",
+      "nome": "Usuario Comum",
+      "tipo": "cliente"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

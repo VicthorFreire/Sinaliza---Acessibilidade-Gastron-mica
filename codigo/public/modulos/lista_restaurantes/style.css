@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --primary-light: #eff6ff;
+    --secondary: #64748b;
+    --dark: #0f172a;
+    --light: #f8fafc;
+    --border: rgba(0,0,0,0.05);
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    font-family: var(--font-sans);
+    color: var(--dark);
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding-bottom: 50px;
+    
+    background-color: #f0f7ff;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.18) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(59, 130, 246, 0.12) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.18) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(59, 130, 246, 0.12) 0px, transparent 50%);
+    background-attachment: fixed;
+}
+
+.bg-pattern {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.12;
+    background-image: radial-gradient(circle at 2px 2px, #3b82f6 1.5px, transparent 0);
+    background-size: 36px 36px;
+}
+
+.glass-nav {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+    padding: 1rem 0;
+}
+.brand-text { font-weight: 900; font-size: 1.5rem; letter-spacing: -0.03em; color: var(--dark); text-decoration: none;}
+
+.search-container { position: relative; max-width: 600px; margin: 0 auto; }
+.search-glow {
+    position: absolute; top: -4px; left: -4px; right: -4px; bottom: -4px;
+    background: linear-gradient(to right, var(--primary), #06b6d4);
+    border-radius: 20px; filter: blur(10px); opacity: 0.25; transition: opacity 0.3s;
+}
+.search-container:focus-within .search-glow { opacity: 0.5; }
+.search-box {
+    position: relative; background: white; border-radius: 16px; padding: 8px;
+    display: flex; align-items: center;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); border: 1px solid var(--border);
+}
+.search-icon { font-size: 1.5rem; color: var(--primary); margin: 0 12px 0 16px; }
+.search-input {
+    flex: 1; border: none; background: transparent; padding: 12px 0;
+    font-size: 1.1rem; font-weight: 500; color: var(--dark); outline: none; width: 100%;
+}
+
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background: white;
+    border-radius: 2rem;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -5px rgba(0,0,0,0.1);
+}
+
+.card-image { width: 100%; height: 200px; object-fit: cover; transition: transform 0.7s ease;}
+.card:hover .card-image { transform: scale(1.05); }
+
+.card-content { padding: 24px; display: flex; flex-direction: column; flex-grow: 1; z-index: 2; background: white;}
+.card-title { font-weight: 900; font-size: 1.25rem; color: var(--dark); margin: 0 0 8px 0; }
+.card-description { font-size: 0.9rem; color: var(--secondary); margin-bottom: 20px; line-height: 1.5;}
+
+.badge-libras {
+    background: var(--primary-light); color: var(--primary-dark);
+    border: 1px solid rgba(37, 99, 235, 0.2); font-size: 0.75rem; font-weight: 800;
+    padding: 6px 12px; border-radius: 8px; display: inline-flex; align-items: center; width: fit-content;
+}
+.tags-comuns-card { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.tag-comum-mini {
+    background: var(--light); color: var(--secondary);
+    border: 1px solid var(--border); font-size: 0.7rem; font-weight: 700;
+    padding: 4px 10px; border-radius: 20px; display: inline-flex; align-items: center;
+}
+
+.btn-action {
+    background-color: var(--light); color: var(--dark);
+    border: 1px solid rgba(0,0,0,0.1); font-weight: 800; border-radius: 12px;
+    padding: 12px; transition: all 0.3s; width: 100%; cursor: pointer; text-decoration: none; text-align: center;
+}
+.btn-action:hover { background-color: var(--primary); color: white; border-color: var(--primary); }
+
+/* =========================================
+   ESTILOS NOVOS: FILTROS E EMPTY STATE 
+   ========================================= */
+
+.filter-pill {
+    background-color: white;
+    color: var(--secondary);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.filter-pill:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.filter-pill.active {
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* Container do Estado Vazio (Quando a busca não acha nada) */
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    grid-column: 1 / -1; /* Força a ocupar todas as colunas do grid de cards */
+    background: white;
+    border-radius: 2rem;
+    border: 2px dashed #cbd5e1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty-state i {
+    font-size: 3.5rem;
+    color: #94a3b8;
+    margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+    color: var(--dark);
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.empty-state p {
+    color: var(--secondary);
+    max-width: 400px;
+    margin: 0 auto;
+    line-height: 1.5;
+}

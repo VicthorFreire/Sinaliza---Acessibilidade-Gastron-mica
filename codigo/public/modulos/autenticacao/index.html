@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinaliza - Acesso</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-pattern d-flex align-items-center justify-content-center min-vh-100">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-5">
+
+                <div class="text-center mb-4">
+                    <a href="../../index.html" class="text-decoration-none d-inline-flex align-items-center gap-2">
+                        <img src="../../assets/images/logo_tiaw.png" alt="Logo Sinaliza" class="shadow-sm"
+                            style="width: 48px; height: 48px; border-radius: 12px; object-fit: contain;">
+                        <span class="brand-text text-dark fs-3">Sinaliza<span class="text-primary">.</span></span>
+                    </a>
+                </div>
+
+                <div class="card glass-card border-0 shadow-lg rounded-4 overflow-hidden">
+
+                    <ul class="nav nav-tabs nav-justified border-0" id="authTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active fw-bold py-3 border-0" id="login-tab" data-bs-toggle="tab"
+                                data-bs-target="#login-pane" type="button" role="tab">Entrar</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link fw-bold py-3 border-0" id="cadastro-tab" data-bs-toggle="tab"
+                                data-bs-target="#cadastro-pane" type="button" role="tab">Criar Conta</button>
+                        </li>
+                    </ul>
+
+                    <div class="card-body p-4 p-sm-5 tab-content" id="authTabsContent">
+
+                        <div class="tab-pane fade show active" id="login-pane" role="tabpanel">
+                            <div class="text-center mb-4">
+                                <h4 class="fw-bold">Bem-vindo de volta!</h4>
+                                <p class="text-secondary">Acesse sua conta para continuar.</p>
+                            </div>
+
+                            <form id="formLogin">
+                                <div class="d-flex justify-content-center gap-3 mb-4">
+                                    <input type="radio" class="btn-check" name="tipoLogin" id="loginCliente" value="cliente" checked>
+                                    <label class="btn btn-outline-primary rounded-pill px-4 fw-medium" for="loginCliente">
+                                        <i class="bi bi-person me-2"></i>Cliente
+                                    </label>
+                                    <input type="radio" class="btn-check" name="tipoLogin" id="loginRestaurante" value="restaurante">
+                                    <label class="btn btn-outline-primary rounded-pill px-4 fw-medium" for="loginRestaurante">
+                                        <i class="bi bi-shop me-2"></i>Restaurante
+                                    </label>
+                                </div>
+
+                                <div class="mb-3" id="divEmail">
+                                    <label class="form-label fw-medium" id="labelLogin">Email</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light border-end-0">
+                                            <i class="bi bi-person text-secondary"></i>
+                                        </span>
+                                        <input type="text" class="form-control bg-light border-start-0 ps-0" id="loginIdentificador" required>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="form-label fw-medium">Senha</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light border-end-0">
+                                            <i class="bi bi-lock text-secondary"></i>
+                                        </span>
+                                        <input type="password" class="form-control bg-light border-start-0 ps-0" id="loginSenha" required>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 rounded-pill py-2 fw-bold shadow-sm">Entrar no Sistema</button>
+                            </form>
+                        </div>
+
+                        <div class="tab-pane fade" id="cadastro-pane" role="tabpanel">
+                            <div class="text-center mb-4">
+                                <h4 class="fw-bold">Junte-se a nós</h4>
+                                <p class="text-secondary">Escolha seu perfil e faça parte.</p>
+                            </div>
+
+                            <form id="formCadastro">
+                                <div class="d-flex justify-content-center gap-3 mb-4">
+                                    <input type="radio" class="btn-check" name="tipoConta" id="tipoCliente"
+                                        value="cliente" checked>
+                                    <label class="btn btn-outline-primary rounded-pill px-4 fw-medium"
+                                        for="tipoCliente"><i class="bi bi-person me-2"></i>Sou Cliente</label>
+
+                                    <input type="radio" class="btn-check" name="tipoConta" id="tipoRestaurante"
+                                        value="restaurante">
+                                    <label class="btn btn-outline-primary rounded-pill px-4 fw-medium"
+                                        for="tipoRestaurante"><i class="bi bi-shop me-2"></i>Sou Restaurante</label>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label fw-medium" id="labelNome">Nome Completo</label>
+                                    <input type="text" class="form-control bg-light" id="cadastroNome" required>
+                                </div>
+
+                                <div class="mb-3 d-none" id="divCnpj">
+                                    <label class="form-label fw-medium">CNPJ</label>
+                                    <input type="text" class="form-control bg-light" id="cadastroCnpj" placeholder="00.000.000/0000-00" maxlength="18">
+                                </div>
+
+                                <div class="mb-3" id="divEmailCadastro">
+                                    <label class="form-label fw-medium">Email</label>
+                                    <input type="email" class="form-control bg-light" id="cadastroEmail" placeholder="exemplo@email.com" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label fw-medium">Senha</label>
+                                    <input type="password" class="form-control bg-light" id="cadastroSenha" required>
+                                </div>
+
+                                <button type="submit"
+                                    class="btn btn-dark w-100 rounded-pill py-2 fw-bold shadow-sm">Criar Conta</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.4.3/imask.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

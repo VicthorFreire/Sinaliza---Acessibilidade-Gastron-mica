@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --primary-light: #eff6ff;
+    --secondary: #64748b;
+    --dark: #0f172a;
+    --light: #f8fafc;
+    --success: #10b981;
+    --error: #ef4444;
+    --border: rgba(0,0,0,0.08);
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    font-family: var(--font-sans);
+    color: var(--dark);
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 2rem 1rem;
+    min-height: 100vh;
+    box-sizing: border-box;
+    
+    background-color: #f0f7ff;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.18) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(59, 130, 246, 0.12) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.18) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(59, 130, 246, 0.12) 0px, transparent 50%);
+    background-attachment: fixed;
+}
+
+/* =========================================
+   CABEÇALHO DA PÁGINA
+   ========================================= */
+.page-header {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+    position: relative;
+}
+
+.btn-voltar {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-decoration: none;
+    color: var(--secondary);
+    font-weight: 700;
+    font-size: 0.9rem;
+    background: white;
+    padding: 8px 16px;
+    border-radius: 50px;
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    transition: all 0.3s ease;
+}
+
+.btn-voltar:hover {
+    color: var(--primary);
+    border-color: var(--primary-light);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+}
+
+#titulo-pagina {
+    font-weight: 900;
+    font-size: 1.75rem;
+    color: var(--dark);
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.02em;
+}
+
+.subtitulo {
+    color: var(--secondary);
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* =========================================
+   CONTAINER DO FORMULÁRIO (CARD)
+   ========================================= */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 2rem;
+    padding: 2.5rem;
+    border: 1px solid var(--border);
+    box-shadow: 0 20px 40px -5px rgba(0,0,0,0.05);
+}
+
+.form-container > p {
+    color: var(--secondary);
+    line-height: 1.6;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+    text-align: center;
+}
+
+/* =========================================
+   SISTEMA DE ESTRELAS
+   ========================================= */
+.rating-fieldset {
+    border: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+    text-align: center;
+}
+
+.rating-fieldset legend {
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--dark);
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 8px;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 3rem;
+    color: #e2e8f0; /* Estrela vazia (cinza claro) */
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+    line-height: 1;
+}
+
+/* Hover e Seleção das Estrelas */
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input:checked ~ label {
+    color: #f59e0b; /* Amarelo ouro (Warning color) */
+}
+
+.star-rating label:hover {
+    transform: scale(1.15);
+}
+
+/* =========================================
+   TAGS DE ACESSIBILIDADE
+   ========================================= */
+.tags-group {
+    margin-bottom: 2rem;
+}
+
+.tags-label {
+    display: block;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--dark);
+    margin-bottom: 1rem;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Reutilizando seu estilo de "filter-pill" / "btn-categoria" */
+.tag-btn {
+    background-color: white;
+    color: var(--secondary);
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    font-family: var(--font-sans);
+}
+
+.tag-btn:hover {
+    border-color: var(--primary-light);
+    color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+}
+
+.tag-btn.active {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    border-color: var(--primary);
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+/* =========================================
+   CAMPO DE TEXTO
+   ========================================= */
+.input-group {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--dark);
+    margin-bottom: 1rem;
+}
+
+.input-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid var(--border);
+    background: #f8fafc;
+    border-radius: 16px;
+    padding: 1rem;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    color: var(--dark);
+    resize: vertical;
+    transition: all 0.3s ease;
+    outline: none;
+    min-height: 120px;
+}
+
+.input-group textarea:focus {
+    background: white;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+/* =========================================
+   BOTÃO DE SUBMIT
+   ========================================= */
+#submitBtn {
+    width: 100%;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 16px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px -5px rgba(37, 99, 235, 0.4);
+    font-family: var(--font-sans);
+}
+
+#submitBtn:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px -5px rgba(37, 99, 235, 0.5);
+    background-color: var(--primary-dark);
+}
+
+#submitBtn:disabled {
+    background-color: var(--secondary);
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* =========================================
+   MENSAGENS DE FEEDBACK (JS usa essas classes)
+   ========================================= */
+.hidden {
+    display: none !important;
+}
+
+#message {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 12px;
+    font-weight: 600;
+    text-align: center;
+    animation: slideUp 0.3s ease;
+}
+
+.success-msg {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #34d399;
+}
+
+.error-msg {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #f87171;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================
+   RESPONSIVIDADE
+   ========================================= */
+@media (max-width: 640px) {
+    .form-container {
+        padding: 1.5rem;
+        border-radius: 1.5rem;
+    }
+    
+    .btn-voltar {
+        position: static;
+        display: inline-block;
+        margin-bottom: 1rem;
+        transform: none;
+    }
+    
+    .star-rating label {
+        font-size: 2.5rem;
+    }
+}

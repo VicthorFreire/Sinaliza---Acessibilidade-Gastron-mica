@@ -1,0 +1,122 @@
+/* Custom Styles - Sinaliza (Detalhes do Restaurante) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --primary-light: #eff6ff;
+    --secondary: #64748b;
+    --dark: #0f172a;
+    --light: #f8fafc;
+    --border: rgba(0,0,0,0.05);
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    font-family: var(--font-sans);
+    color: var(--dark);
+    -webkit-font-smoothing: antialiased;
+    background-color: #f0f7ff;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.18) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(59, 130, 246, 0.12) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.18) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(59, 130, 246, 0.12) 0px, transparent 50%);
+    background-attachment: fixed;
+    margin: 0; padding-bottom: 60px;
+}
+
+.bg-pattern {
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none; z-index: -1; opacity: 0.12;
+    background-image: radial-gradient(circle at 2px 2px, #3b82f6 1.5px, transparent 0);
+    background-size: 36px 36px;
+}
+
+/* Navbar Premium */
+.glass-nav {
+    background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03); padding: 1rem 0;
+}
+.brand-text { font-weight: 900; font-size: 1.5rem; letter-spacing: -0.03em; color: var(--dark); text-decoration: none;}
+.hidden { display: none !important; }
+
+/* Layout da Página de Detalhes */
+.container-detalhes { max-width: 900px; margin: 0 auto; padding: 0 15px; }
+
+/* Card Principal (Hero do Restaurante) */
+.card-restaurante-hero {
+    background: white; border-radius: 2rem; border: 1px solid var(--border);
+    overflow: hidden; box-shadow: 0 20px 40px -5px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+.foto-restaurante { width: 100%; height: 350px; object-fit: cover; }
+.info-restaurante { padding: 30px; }
+
+.tags-topo { display: flex; gap: 10px; margin-bottom: 15px; align-items: center; }
+.tag-cozinha {
+    background: var(--light); color: var(--secondary); padding: 6px 14px;
+    border-radius: 20px; font-weight: 700; font-size: 0.85rem; border: 1px solid var(--border);
+}
+.tag-libras {
+    background: var(--primary-light); color: var(--primary-dark); padding: 6px 14px;
+    border-radius: 20px; font-weight: 800; font-size: 0.85rem; border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+.nome-restaurante { font-weight: 900; font-size: 2.5rem; color: var(--dark); margin: 0 0 10px 0; letter-spacing: -0.02em; }
+.descricao-restaurante { color: var(--secondary); font-size: 1.1rem; line-height: 1.6; margin-bottom: 24px; }
+
+.meta-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;
+    background: var(--light); padding: 20px; border-radius: 1.5rem; border: 1px solid var(--border);
+}
+.meta-grid div { display: flex; align-items: center; gap: 10px; color: var(--dark); font-weight: 600; font-size: 0.95rem; }
+.meta-icon { color: var(--primary); font-size: 1.2rem; }
+
+/* Cards de Seção (Acessibilidade, Avaliações, Cardápio) */
+.card-section {
+    background: white; border-radius: 2rem; border: 1px solid var(--border);
+    padding: 30px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); margin-bottom: 2rem;
+}
+.section-title { font-weight: 900; font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--dark); }
+
+/* Acessibilidade */
+.pontuacao-container { display: flex; align-items: center; gap: 20px; margin-bottom: 24px; flex-wrap: wrap; }
+.accessibility-seal {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    width: 120px; height: 120px; border-radius: 24px; font-weight: 900; text-align: center; padding: 10px;
+}
+#det-selo-icon { font-size: 2.5rem; margin-bottom: 5px; }
+#det-selo-texto { font-size: 0.75rem; letter-spacing: 1px; }
+
+.pontuacao-bar-grande { height: 16px; background: var(--light); border-radius: 8px; overflow: hidden; width: 100%; border: 1px solid var(--border); }
+.pontuacao-fill-grande { height: 100%; border-radius: 8px; transition: width 1s ease-out; }
+.tags-comuns-container { display: flex; flex-direction: column; gap: 6px; }
+.tags-comuns-label { font-size: 0.75rem; font-weight: 700; color: var(--secondary); text-transform: uppercase; letter-spacing: 0.5px; }
+.tag-comum-badge {
+    background: var(--primary-light); color: var(--primary-dark); padding: 6px 14px;
+    border-radius: 20px; font-weight: 800; font-size: 0.85rem; border: 1px solid rgba(37, 99, 235, 0.2);
+    display: inline-flex; align-items: center; gap: 6px;
+}
+
+.acoes-avaliacao { display: flex; gap: 10px; margin-top: 12px; }
+.edicao-avaliacao-form label { font-weight: 700; font-size: 0.85rem; color: var(--secondary); margin-bottom: 4px; display: block; }
+.edicao-tag-chip {
+    cursor: pointer; user-select: none; background: var(--light); color: var(--secondary);
+    border: 1px solid var(--border); border-radius: 20px; padding: 6px 14px; font-weight: 700; font-size: 0.8rem;
+}
+.edicao-tag-chip.active { background: var(--primary); color: white; border-color: var(--primary); }
+/* Botões */
+.btn-secundario {
+    background: white; color: var(--primary); border: 2px solid var(--primary);
+    padding: 8px 20px; border-radius: 12px; font-weight: 700; text-decoration: none; transition: all 0.3s;
+}
+.btn-secundario:hover { background: var(--primary); color: white; }
+
+.btn-garcom {
+    display: inline-flex; align-items: center; justify-content: center;
+    background: var(--dark); color: white; padding: 16px 40px; border-radius: 50px;
+    font-size: 1.25rem; font-weight: 800; text-decoration: none; box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.btn-garcom:hover { transform: translateY(-4px); box-shadow: 0 15px 25px rgba(0,0,0,0.3); color: white;}

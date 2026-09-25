@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Restaurante | Sinaliza</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-pattern"></div>
+    
+    <nav class="navbar navbar-expand-lg glass-nav sticky-top mb-4">
+        <div class="container-xl">
+            <a class="navbar-brand d-flex align-items-center gap-3" href="../../index.html">
+                <img src="../../assets/images/logo_tiaw.png" alt="Logo Sinaliza" class="shadow-sm" style="width: 48px; height: 48px; border-radius: 12px; object-fit: contain;">
+                <span class="brand-text">Sinaliza<span class="text-primary">.</span></span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list fs-4 text-dark"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-4">
+                    <li class="nav-item"><a class="nav-link fw-medium text-secondary" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link fw-medium text-secondary" href="../lista_restaurantes/index.html">Restaurantes</a></li>
+                    <li class="nav-item"><a class="nav-link fw-medium text-secondary" href="../modo_garcom/index.html">Modo Garçom</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-detalhes pt-3">
+        
+        <!-- Estado de erro -->
+        <div id="estado-erro" class="hidden text-center card-section py-5">
+            <i class="bi bi-exclamation-triangle text-danger" style="font-size: 4rem;"></i>
+            <h2 class="fw-black mt-3">Restaurante não encontrado</h2>
+            <p class="text-secondary fs-5">Nenhum restaurante foi selecionado ou ele não existe.</p>
+            <a href="../../index.html" class="btn btn-primary rounded-pill px-4 mt-3 fw-bold">Voltar para a Home</a>
+        </div>
+
+        <!-- Estado de carregamento -->
+        <div id="estado-carregando" class="text-center py-5">
+            <div class="spinner-border text-primary mb-3" style="width: 3rem; height: 3rem;" role="status"></div>
+            <h5 class="fw-bold text-secondary">A carregar informações do restaurante...</h5>
+        </div>
+
+        <!-- Conteúdo principal -->
+        <main id="conteudo-principal" class="hidden">
+            
+            <section class="card-restaurante-hero">
+                <img id="det-foto" src="" alt="Foto do Restaurante" class="foto-restaurante">
+                <div class="info-restaurante">
+                    <div class="tags-topo">
+                        <span id="det-tipo-cozinha" class="tag-cozinha"></span>
+                        <span id="det-libras-badge" class="hidden tag-libras"><i class="bi bi-check-circle-fill"></i> LIBRAS</span>
+                    </div>
+                    <h2 id="det-nome" class="nome-restaurante"></h2>
+                    <p id="det-descricao" class="descricao-restaurante"></p>
+                    
+                    <div class="meta-grid">
+                        <div><i class="bi bi-geo-alt-fill meta-icon"></i> <span id="det-endereco"></span></div>
+                        <div><i class="bi bi-map-fill meta-icon"></i> <span id="det-cidade"></span></div>
+                        <div><i class="bi bi-telephone-fill meta-icon"></i> <span id="det-telefone"></span></div>
+                        <div><i class="bi bi-clock-fill meta-icon"></i> <span id="det-horario"></span></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card-section">
+                <h3 class="section-title"><i class="bi bi-universal-access-circle text-primary me-2"></i>Acessibilidade</h3>
+                <div class="pontuacao-container">
+                    <div id="det-selo" class="accessibility-seal">
+                        <span id="det-selo-icon"></span>
+                        <span id="det-selo-texto"></span>
+                    </div>
+                    <div id="det-tags-comuns" class="tags-comuns-container hidden">
+                        <span class="tags-comuns-label">Mais citado nas avaliações</span>
+                        <div id="det-tags-comuns-lista" class="d-flex flex-wrap gap-2"></div>
+                    </div>
+                    <div style="flex:1">
+                        <div class="pontuacao-bar-grande">
+                            <div id="det-pontuacao-fill" class="pontuacao-fill-grande"></div>
+                        </div>
+                        <p id="det-pontuacao-label" class="fw-bold mt-2 text-secondary"></p>
+                    </div>
+                </div>
+                <div id="det-checklist" class="mt-4"></div>
+            </section>
+
+            <section class="card-section">
+                <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-3">
+                    <h3 class="section-title mb-0"><i class="bi bi-star-fill text-warning me-2"></i>Avaliações</h3>
+                    <a id="link-avaliar" href="#" class="btn-secundario"><i class="bi bi-plus-lg"></i> Deixar avaliação</a>
+                </div>
+                <div id="resumo-avaliacoes" class="mb-4"></div>
+                <div id="lista-avaliacoes"></div>
+            </section>
+
+            <section class="card-section">
+                <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-3">
+                    <h3 class="section-title mb-0"><i class="bi bi-menu-button-wide-fill text-danger me-2"></i>Cardápio</h3>
+                    <a id="link-gerenciar-cardapio" href="#" class="btn-secundario"><i class="bi bi-pencil-square"></i> Gerenciar</a>
+                </div>
+                <div id="lista-cardapio" class="row g-4"></div>
+            </section>
+
+            <section class="text-center py-5">
+                <a href="../modo_garcom/index.html" class="btn-garcom">
+                    <i class="bi bi-chat-square-text-fill me-3"></i> Abrir Modo Garçom
+                </a>
+            </section>
+        </main>
+    </div>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
